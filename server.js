@@ -9,7 +9,7 @@ var multer = require('multer');
 var app = express();
 
 app.use(cors());
-var upload = multer({ dest: '/uploads' });
+var upload = multer();
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.get('/', function(req, res) {
